@@ -1,0 +1,10 @@
+body, html { 
+	overflow-x: hidden; 
+	overflow-y: auto;
+	background-color: white;
+	font-family:Verdana;
+}
+.black {background-color:rgba(0, 0, 0, 0.87); color: white;}
+.ajustar{
+	margin-top:35;
+}

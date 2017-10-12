@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>RecordAudio</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/app.css" rel="stylesheet">
+	<link href="css/categoria.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/categoria.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="panel preencher panel-default">
+		<div class="panel-heading texto clearfix fixed">
+			<div class="alterTrocar col-xs-3 col-sm-3 col-md-2 text-left">
+				<a id="trocarLoja" onclick="trocarLojas()"></a>
+			</div>
+			<div class="alterLoja col-xs-6 col-sm-6 col-md-8 text-center">
+				<a id="lojaEscolhida">Selecione a loja</a>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-2 text-right">
+				<a href="index.html" onclick="sair();">Sair</a>
+			</div>
+		</div>
+		<div class="col-xs-12 text-center">
+			<h1 class="texto" id="textoCategoria"></h1>
+		</div>
+		<div class="round-button alterCssRound cat col-xs-6 hide">
+			<div class="round-button-circle space alterCssCircle col-xs-6">
+				<br>
+				<a href="audio.html" onclick="return categoriaSelecionada(this);" class="round-button">Feminino</a>
+			</div>
+		</div>
+		<div class="round-button alterCssRound cat col-xs-6 hide">
+			<div class="round-button-circle space alterCssCircle col-xs-6">
+				<br>
+				<a href="audio.html" onclick="return categoriaSelecionada(this);" class="round-button">Masculino</a>
+			</div>
+		</div>
+		<div class="round-button alterCssRound cat col-xs-6 hide">
+			<div class="round-button-circle space alterCssCircle col-xs-6">
+				<br>
+				<a href="audio.html" onclick="return categoriaSelecionada(this);" class="round-button">Acessórios</a>
+			</div>
+		</div>
+		<div class="round-button alterCssRound cat col-xs-6 hide">
+			<div class="round-button-circle space alterCssCircle col-xs-6">
+				<br>
+				<a href="audio.html" onclick="return categoriaSelecionada(this);" class="round-button">Calçados</a>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade ajustar" id="confirm-modal" tabindex="-1" role="dialog"
+			aria-labelledby="modalLabel" data-backdrop="static">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<select class="form-control" onchange="lojaSelecionada()" id="selectLoja">
+					<option value="0">Selecione a Loja</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<title>RecordAudio</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+  		<link href="css/custom/style.css" rel="stylesheet">
+	</head>
+	<body class="clearfix">
+		<div class="panel panel-fullscreen">
+			<div class="panel-heading panel-default panel-title">
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-2 text-left">
+						<a href="categoria.html">Voltar</a>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-8 text-center">
+						<a href="" id="categoria-text">Gravações</a>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-2 text-right">
+						<a href="index.html" onclick="sair();">Sair	</a>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body" style="height:80%; background: whitesmoke;overflow: auto;">
+				<ul id="recordingslist"></ul>
+			</div>
+			<div class="panel-footer footer" style="background: white;">
+				<div class="row">
+					<div class="vertical-center">
+						<div class="col-xs-4 text-right">
+							<button disabled id="btn-stop" class="btn btn-danger btn-circle btn-lg"></button>
+						</div>
+						<div class="col-xs-4 text-center">
+							<button id="btn-start" class="btn btn-circle btn-xl black"><i class="fa fa-microphone fa-2x" style="color: white;"></i></button>
+						</div>
+						<div class="col-xs-4 text-left">
+							<time>00:00</time>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-xs-12 text-center">
+						<button class="btn btn-block black" onclick="enviarGravacao();">Enviar gravações</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		  <div class="modal" id="modal-carregar" role="dialog" style="height: 100%;">
+		    <div class="modal-dialog panel" style="height: 100%; margin: 0px; opacity: 0.6;">
+		      <div class="text-center" style="padding-top: 60%;">
+		      
+				  <div class="row"><i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i></div>
+				  <div class="row"><p id="txt-carregar">Aguarde, enquanto processamos o aúdio.</p></div>
+				</div>
+		    </div>
+		  </div>
+	  <script>
+	  	var audioGlobal = [];
+	  	$('#categoria-text').text(localStorage.getItem('categoria'));
+		
+		function sair(){
+			localStorage.removeItem("user");
+		}
+	  </script>
+	<script type="text/javascript" src="js/audio/WavAudioEncoder.min.js"></script>
+	<script type="text/javascript" src="js/audio/utils.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/audio/wav-demo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+.round-button {
+	width:50%;
+}
+
+.round-button-circle {
+	width: 100%;
+	height: 0%;
+	padding-bottom: 100%;
+	border-radius: 50%;
+	overflow:hidden;
+	background-color:rgba(0, 0, 0, 0.87);
+}
+
+.round-button a {
+	display:block;
+	width:100%;
+	padding-top:50%;
+	padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.75em;
+	margin-left:-0.2em;
+	text-align: center;
+	
+	color:#ffffff;
+	font-family:Verdana;
+	font-weight:bold;
+	text-decoration:none;
+	font-size: 5.0vw;
+}
+
+body, html { 
+	overflow-x: hidden; 
+	overflow-y: hide;
+	background-color: white;
+	box-sizing: border-box;
+}
+*, *:before, *:after { box-sizing: inherit; }
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  /* min-height is needed for pages that might scroll, ie they may contain _more_ than 100% of viewport height */
+  min-height: 100%;
+  /* needed to prevent unwanted scroll-bars */
+}
+.ajustar{
+	margin-top:50;
+}
+.texto{
+	font-size: 16px;
+	font-family:'Open Sans', sans-serif;
+}
+.space{
+	margin-top:25%;
+}

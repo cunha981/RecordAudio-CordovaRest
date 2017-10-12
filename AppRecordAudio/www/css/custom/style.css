@@ -1,0 +1,89 @@
+html,body {
+  box-sizing: border-box;
+}
+*, *:before, *:after { box-sizing: inherit; }
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  /* min-height is needed for pages that might scroll, ie they may contain _more_ than 100% of viewport height */
+  min-height: 100%;
+  /* needed to prevent unwanted scroll-bars */
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+.panel-fullscreen {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: auto;
+}
+ul { list-style: none; }
+time{font-size: large;}
+a, a:hover, a:active, a:visited, a:focus{
+  color: #555;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  text-decoration: none;
+  }
+#recordingslist audio { display: block; margin-bottom: 10px; }
+#recordingslist{padding-left: 0px;}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 12px 12px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 12px 12px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+.black {background-color:rgba(0, 0, 0, 0.87); color: white;}
+.white{background-color:#ffffff;}
+p {
+   margin: 0px;
+   padding: 0px;
+}
+.float-left{
+	float: left;
+}
+.width100{width: 100%;}
+.padding0{padding: 0px;}
+.btn-delete{
+	padding-bottom: 0px;
+	padding-top:10px;
+}
+.footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
